@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+    font-family: "RoslindaleDisplayCondensed";
+    font-display: swap;
+    src: local("RoslindaleDisplayCondensed-Bold"),
+        url("./assets/fonts/RoslindaleDisplayCondensed-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "FavoritStd";
+    font-display: swap;
+    src: local("FavoritStd-Medium"), url("./assets/fonts/FavoritStd-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "FavoritMonoStd";
+    font-display: swap;
+    src: local("FavoritMonoStd-Medium"),
+        url("./assets/fonts/FavoritMonoStd-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "VinovestMedium";
+    font-display: swap;
+    src: local("Vinovest-Medium"), url("./assets/fonts/Vinovest-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "VinovestMono";
+    font-display: swap;
+    src: local("Vinovest-Mono"), url("./assets/fonts/Vinovest-Mono.otf") format("opentype");
+}

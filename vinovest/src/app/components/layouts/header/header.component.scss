@@ -1,0 +1,103 @@
+$height : 90px;
+// common link css
+.link {
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 22px;
+    margin: 0px 40px 0px 0px;    
+    font-weight: 500;
+    text-align: center;    
+    text-decoration: none;
+    position: relative;    
+    text-transform: uppercase;   
+    font-family: VinovestMono;
+}
+.close-menu {
+    transition: transform 0.5s ease 0s;
+    transform: translateY(-101%);
+    opacity: 1;
+}
+.open-menu {
+    transition: transform 0.7s ease 0s;
+    transform: translateY(0%);
+    z-index: 1;
+    opacity: 1;
+}
+//  main custom css
+.header-main {        
+
+    // background-color: gray;        
+    .nav-link {
+        height: $height;
+        padding : 0px 40px;
+        display: flex;
+        .logo {
+            height : 100%;
+            .logo-img {
+                height: 100%;        
+            }
+        }
+        .header-desktop-transparent-menuitems {
+            padding : 0px 0px 0px 58px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            .main-menu {
+                display: flex;
+                align-items: center;
+                .mainMenu-link {
+                    color : rgb(36, 46, 53) ;
+                }
+            }
+            .left-menu {
+                display: flex;
+                align-items: center;
+                text-align: right;
+                margin-left: auto;
+                .login-link {                        
+                    padding: 12px 20px;
+                    border-radius : 3px;
+                    border : 1px solid rgb(36, 46, 53);
+                    color :rgb(36, 46, 53);                            
+                    margin-right: 0px !important;
+                    line-height: 18px;
+                    position: relative;
+                }
+                .login-link::after {
+                    content: '';
+                    width: 50%;              
+                    position: absolute;              
+                    border-bottom: 2px solid rgb(36, 46, 53) ;
+                    left: 50%;      
+                    display: block;
+                    padding-bottom: 5px;
+                    transform: translateX(-50%) ;
+                }
+                .left-started-btn {
+                    background-color: rgb(168, 109, 55);
+                    color : white;
+                    border-radius: 3px;
+                    padding: 12px 20px;
+                    margin-left: 20px;   
+                    margin-right: 0px;                         
+                    line-height: 18px;
+                    border : none;
+                    font-family: VinovestMono;                            
+                }
+                .left-started-btn:hover {
+                    box-shadow: rgb(0 0 0 / 30%) 0px 4px 20px ;
+                    transition: box-shadow 0.6s ease-in-out 0s;
+                }
+            }
+        }
+    }
+    .header-desktop-white {
+        background-color: grey;
+        display: none;
+    }
+    .header-mobile {
+        display: none;
+    }
+        
+    
+}

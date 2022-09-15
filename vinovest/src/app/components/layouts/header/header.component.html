@@ -1,0 +1,57 @@
+
+
+<div class="header-main">
+    <nav>
+        <!-- Heade Desktop view -->
+        
+        <div class="header-desktop">
+            <!-- Header desktop transparent -->
+            <div class="header-desktop-transparent">
+                <nav class="nav-link">
+                    <div class="logo">
+                        <a href="/">
+                            <img src={{logoImg_source}} alt="logo" class="logo-img" />
+                        </a>
+                    </div>
+                    <div class="header-desktop-transparent-menuitems" >
+                        <div class="main-menu" >
+                            <a class="mainMenu-link link" *ngFor="let menuItem of menuItems">{{menuItem.label}}</a>
+                        </div>
+                        <div class="left-menu">                            
+                            <a class="login-link link" href="/login">Log in</a>                            
+                            <button class="left-started-btn link" >Get started</button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- End Header desktop transparent -->
+
+            <!-- Header desktop white -->
+            <div class="header-desktop-white">
+                <nav class="nav-link">
+                    <div class="logo">
+                        <a href="/">
+                            <img src={{logoImg_source}} alt="logo" class="logo-img" />
+                        </a>
+                    </div>
+                    <div class="header-desktop-transparent-menuitems" >
+                        <div class="main-menu" >
+                            <a class="mainMenu-link link" *ngFor="let menuItem of menuItems">{{menuItem.label}}</a>
+                        </div>
+                        <div class="left-menu">                            
+                            <a class="login-link link" href="/login">Log in</a>                            
+                            <button class="left-started-btn link" >Get started</button>
+                        </div>
+                    </div>
+                </nav>                
+            </div>
+            <!-- End Header desktop white -->
+
+        </div>
+        <!-- End Header Desktop view -->
+
+        <div class="header-mobile ">
+            mobile white bar
+        </div>
+    </nav>
+</div>

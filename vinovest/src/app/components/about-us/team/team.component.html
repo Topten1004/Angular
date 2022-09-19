@@ -1,0 +1,54 @@
+<div class="team-main section">
+    <div class="team-member-div">
+        <span>{{questionTitle}}</span>    
+        <h2>{{title}}</h2>
+        <p>{{content}}</p>
+        <div class="team-member">
+            <ul  class="memberWrapper">
+                <li *ngFor="let member of team_members">
+                    <app-member-card
+                        [img]="member.img"
+                        [name]="member.name"
+                        [position]="member.position"
+                        [desc]="member.desc"
+                    ></app-member-card>
+                </li>
+                <li class="arrowWrapper">
+                    <a href="/careers">
+                        <h3>
+                            See open positions
+                        </h3>
+                        <img src={{arrow_img}} alt="arrow_img" class="arrow-img" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="blue-bg"></div>
+    </div>
+
+    <div class="council-members">
+        <h2>
+            Vinovest Council
+        </h2>
+        <div class="team-member">
+            <ul  class="memberWrapper">
+                <li *ngFor="let member of council_members">
+                    <app-member-card
+                        [img]="member.img"
+                        [name]="member.name"
+                        [position]="member.position"
+                        [desc]="member.desc"
+                    ></app-member-card>
+                </li>            
+            </ul>
+        </div>
+    </div>
+
+    <app-notransform-btn
+        [askTitle]="askTitle"
+        [tailTitle]="tailTitle"        
+        [font]="font"
+        [tail_img_path]="arrow_img"
+    ></app-notransform-btn>
+
+</div>

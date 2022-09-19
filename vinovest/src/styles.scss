@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -34,4 +35,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-family: "VinovestMono";
     font-display: swap;
     src: local("Vinovest-Mono"), url("./assets/fonts/Vinovest-Mono.otf") format("opentype");
+}
+
+.section {
+    padding: 86px 8.888% 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px auto;
+    width: 100%;
+    color: rgb(36, 46, 53);
 }

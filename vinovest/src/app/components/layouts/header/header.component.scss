@@ -23,10 +23,16 @@ $height : 90px;
     z-index: 1;
     opacity: 1;
 }
-//  main custom css
-.header-main {        
 
-    // background-color: gray;        
+
+//  main custom css
+.header-main {    
+    position: absolute;    
+    nav {
+        position: fixed;
+        width: 100%;
+    }
+    
     .nav-link {
         height: $height;
         padding : 0px 40px;

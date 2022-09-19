@@ -1,0 +1,104 @@
+
+// reference css
+.team-member {
+    .memberWrapper {
+        list-style-type: none;
+        padding: 0px;
+        display: grid;
+        grid-auto-columns: 1fr;
+        gap: 40px 30px;
+        grid-template-columns: repeat(4, minmax(0px, 1fr));
+        grid-template-rows: auto auto;
+        margin-bottom: 150px;
+    }
+    .arrowWrapper {
+        border: 4px solid rgb(36, 46, 53);
+        grid-column: 2 / 4;
+        width: 425px;
+        padding: 26px 52px 0px 52px;            
+        display: flex;
+        justify-content: center;
+        margin: 34px auto 0px;            
+        a {
+            text-decoration: none;
+            h3 {                    
+                color: rgb(36, 46, 53);                
+                font-size: 32px;
+                font-weight: 500;
+                font-family: Roslindaledisplaycondensed, sans-serif;
+                text-align: center;
+                margin-bottom: 10px;
+                line-height: 41px;
+            }
+            img {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+// main css
+.team-member-div {    
+    max-width: 1273px;
+    padding: 0px;    
+    margin: 170px auto 0px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    span {
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        font-size: 18px;
+        font-family: Favoritmonostd, sans-serif;
+    }
+    h2 {
+        margin: 0px auto 50px ;
+        font-size: 64px;
+        text-align: center;
+        max-width: 1000px;
+        font-weight: 500;
+        line-height: 137%;
+        font-family: Roslindaledisplaycondensed, sans-serif;
+    }
+    p {
+        max-width: 680px;
+        font-size: 20px;
+        line-height: 160%;
+        margin: 0px auto 25px;
+        text-align: center;
+        font-family: Favoritstd, sans-serif;
+    }
+    
+    .blue-bg {
+        position: absolute;
+        inset: 90px 0px 0px;        
+        background-color: rgb(197, 213, 228);        
+        z-index: -100;
+        height: 98%;
+        max-width: 88%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.council-members {
+    max-width: 1273px;
+    padding: 0px;    
+    margin: 20px auto 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        font-size: 64px;
+        font-family: Roslindaledisplaycondensed, sans-serif;
+        text-align: center;
+        margin: 0px auto 70px;
+        max-width: 1000px;
+        font-weight: 500;
+        line-height: 137%;
+    }
+}

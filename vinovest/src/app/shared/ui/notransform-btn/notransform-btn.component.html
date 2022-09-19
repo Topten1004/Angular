@@ -1,0 +1,23 @@
+<button 
+    class="notransform-btn-main"    
+    [ngStyle]="{'width' : width}"    
+>
+    <h3 
+        [ngStyle]="{'font-family': font}"
+    >
+        {{askTitle}} &nbsp;
+    </h3>
+    <div class="tail-title">
+        <h3 [ngStyle]="{'font-family': font}">            
+            {{tailTitle}}
+        </h3>
+        <div class="arrow-wrapper">
+            <svg viewBox="0 0 380 22" width="100%" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="0" y1="11" x2="377" y2="11" stroke="#242E35" stroke-width="2"></line>
+                <path d="M368 1L378 11L368 21" stroke="#242E35" stroke-width="2"></path>
+            </svg>
+        </div>
+
+    </div>
+</button>
+

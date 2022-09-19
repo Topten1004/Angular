@@ -1,0 +1,39 @@
+.notransform-btn-main {
+    display: flex;
+    padding : 44px 20px;
+    background-color: transparent;
+    border: 4px solid rgb(36, 46, 53 );
+    color : rgb(36, 46, 53 );
+    h3 {
+        font-size: 34px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        animation : 2s ease 0s 1 normal forwards running mouseOut;
+    }
+    .tail-title {
+        position: relative;
+        h3 {
+            margin-bottom: 1px;
+        }
+        .arrow-wrapper {       
+            width: 100%;     
+            position: absolute;
+            inset: auto 0px -23px;
+            z-index: 100;
+        }
+    }
+}
+
+.notransform-btn-main:hover {
+    background-color: rgb(36, 46, 53 );
+    color: white;
+    .arrow-wrapper {
+        line {
+            stroke: white;
+        }
+        path {
+            stroke: white;
+        }
+    }
+}
+// #242E35

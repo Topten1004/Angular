@@ -1,1 +1,28 @@
-<p>footer works!</p>
+<div class="footer-main">
+    <app-wine-invest-card></app-wine-invest-card>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-6 left-footer-side">
+                <div class="left-footer-up">
+                    <div class="list-container" *ngFor="let list of footerMenuItems">
+                        <app-footer-list                        
+                            [List]="list"
+                        ></app-footer-list>
+                    </div>
+                </div>
+                <div class="list-container left-footer-down" *ngFor="let list of recentArticles">
+                    <app-footer-list                        
+                        [List]="list"
+                    ></app-footer-list>
+                </div>                
+            </div>
+
+            <div class="col-6">
+                <div class="right-footer-up">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

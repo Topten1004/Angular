@@ -1,14 +1,49 @@
+@keyframes mouseIn {
+    0% {
+        background-color: transparent;
+        color :rgb(36, 46, 53 );
+        stroke: rgb(36, 46, 53 );
+    }
+    50% {
+        background-color: rgb(36, 46, 53 );
+        color: rgb(36, 46, 53 );
+        stroke: rgb(36, 46, 53 );        
+    }
+    100% {
+        background-color: rgb(36, 46, 53 );
+        color: rgb(255, 255, 255);
+        stroke: rgb(255, 255, 255);
+    }
+}
+@keyframes mouseOut {
+    0% {
+        background-color: rgb(36, 46, 53 );
+        color: rgb(255, 255, 255);
+        stroke: rgb(255, 255, 255);
+    }
+    50% {
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        stroke: rgb(255, 255, 255);
+    }
+    100% {
+        background-color: transparent;
+        color: rgb(36, 46, 53 );
+        stroke: rgb(36, 46, 53 );
+    }
+}
+
 .notransform-btn-main {
     display: flex;
     padding : 44px 20px;
     background-color: transparent;
     border: 4px solid rgb(36, 46, 53 );
-    color : rgb(36, 46, 53 );
+    color : rgb(36, 46, 53 );      
+    position: relative;
     h3 {
         font-size: 34px;
         margin-top: 20px;
         margin-bottom: 10px;
-        animation : 2s ease 0s 1 normal forwards running mouseOut;
     }
     .tail-title {
         position: relative;
@@ -22,18 +57,41 @@
             z-index: 100;
         }
     }
-}
-
-.notransform-btn-main:hover {
-    background-color: rgb(36, 46, 53 );
-    color: white;
-    .arrow-wrapper {
-        line {
-            stroke: white;
-        }
-        path {
-            stroke: white;
-        }
+    .circle1 {
+        position: absolute;
+        height: 90px;        
+        width: 90px;
+        border-radius: 50%;
+        background-color: rgb(239 , 221 , 199);
+        left: 14.28%;
+        bottom: -50px;
+        z-index: -1;
+    }
+    .circle2 {
+        position: absolute;
+        height: 138px;
+        width: 138px;
+        border-radius: 50%;
+        background-color: rgb(230, 201, 201);
+        inset : -48px -6.42% auto auto;
+        z-index: -1;
     }
 }
-// #242E35
+
+.mousein {
+    animation: mouseIn 0.2s ease forwards;
+}
+.mousein line,
+.mousein path,
+.mousein h3 {
+    animation: mouseIn 0.2s ease forwards;
+}
+
+.mouseout {
+    animation: mouseOut 0.2s ease forwards;
+}
+.mouseout line,
+.mouseout path,
+.mouseout h3 {
+    animation: mouseOut 0.2s ease forwards;
+}

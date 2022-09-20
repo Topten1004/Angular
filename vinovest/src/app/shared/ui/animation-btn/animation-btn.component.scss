@@ -1,0 +1,35 @@
+.get-started-btn {
+    min-width: 254px;
+    height: 71px;
+    padding: 0px 10px;
+    background: transparent;
+    border: 2px solid rgb(36, 46, 53);
+    position: relative;
+    margin: 0px auto;
+    
+    .get-started-btn-name{
+        color: rgb(239, 221, 199);
+        font-size: 18px;
+        text-transform: uppercase;
+        background-color: rgb(36, 46, 53);
+        position: absolute;
+        left: 0px;
+        top: 0px;                
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Favoritmonostd, sans-serif;
+        transform: translate3d(-8px, -8px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transition: all 0.3s ease 0s;
+        transform-style:  preserve-3d;
+        border: 2px solid rgb(36, 46, 53);
+    }
+}
+.get-started-btn:hover .get-started-btn-name {
+    transform: translate3d(-16px, -16px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    background-color: rgb(239, 221, 199);
+    color: rgb(36, 46, 53);
+    transform-style:  preserve-3d;            
+}

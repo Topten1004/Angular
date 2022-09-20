@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FooterMenuOneItem , FooterMenuItem } from 'src/app/static/footer/footerList';
+import { RecentArticles } from 'src/app/static/footer/recentArticles';
 
 @Component({
   selector: 'app-footer',
@@ -8,6 +10,10 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   constructor() { }
+
+  footerMenuItems : FooterMenuOneItem[] = FooterMenuItem ;
+  recentArticles : FooterMenuOneItem[] = RecentArticles ;
+
 
   ngOnInit(): void {
   }

@@ -14,7 +14,12 @@ export class NotransformBtnComponent implements OnInit {
   @Input() tail_img_path :string = '' ;
   @Input() width :string = '' ;
   @Input() font :string = '' ;
+  
+  isClicked :boolean = false ;
 
+  handleBtn($event: any) : void {
+    this.isClicked = $event.type === 'mouseover' ? true : false ;    
+  }
 
   ngOnInit(): void {
   }

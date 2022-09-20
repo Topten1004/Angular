@@ -1,6 +1,9 @@
 <button 
-    class="notransform-btn-main"    
-    [ngStyle]="{'width' : width}"    
+    class="notransform-btn-main"
+    [ngClass]= "isClicked? 'mousein' : 'mouseout'"
+    [ngStyle]="{'width' : width}"
+    (mouseover)="handleBtn( $event )"
+    (mouseout)="handleBtn( $event )"
 >
     <h3 
         [ngStyle]="{'font-family': font}"
@@ -17,7 +20,7 @@
                 <path d="M368 1L378 11L368 21" stroke="#242E35" stroke-width="2"></path>
             </svg>
         </div>
-
     </div>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
 </button>
-

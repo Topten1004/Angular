@@ -1,20 +1,116 @@
 
 .footer-main {
+    .container {
+        background-color: #242e35;
+        color: rgb(250, 232, 209);
+        padding: 98px 128px;
+        margin: 0px;
+        max-width: 100%;
+        .row {
+            margin: 0px auto;
+            max-width: 1440px;
+        }
+        .left-footer-side {
+            padding: 0px;
 
-}
-.container {
-    background-color: #242e35;
-    color: rgb(250, 232, 209);
-
-    .left-footer-side {
+            .left-footer-up {
+                display: flex;
+                flex-direction: column;                
+                border-bottom: 1px solid rgb(250, 232, 209);
+                border-right: 1px solid rgb(250, 232, 209);
                 
-    }
-    .left-footer-up {
-        display: flex;
-        border-bottom: 1px solid rgb(250, 232, 209);
-        border-right: 1px solid rgb(250, 232, 209);
-    }
-    .left-footer-down {
-        border-right: 1px solid rgb(250, 232, 209);
+                padding-right: 40px;
+                padding-bottom: 41px;
+                padding-top: 40px;
+                .list-container {
+                    display: flex;
+                    padding-bottom: 53px;
+                    justify-content: space-between;
+                }
+                .follow-icons {
+                    display: flex;
+                    padding: 10px 0px;
+                    span {
+                        margin-right: 29px;
+                        font-size: 16px;
+                        font-family: FavoritStd;
+                        font-weight: 500;
+                        line-height: 28px;
+                    }
+                    li {
+                        list-style: none;
+                        margin-right: 20px;
+                    }
+                }
+            }
+            .left-footer-down {
+                border-right: 1px solid rgb(250, 232, 209);
+                padding-top: 28px;
+                padding-bottom: 39px;         
+            }
+        }
+        .right-footer-side {
+            padding: 0px;
+            .newsletter-title {
+                font-family: Roslindaledisplaycondensed, sans-serif;
+                font-size: 32px;
+                font-weight: 500;
+                line-height: 44px;
+                margin: 0px;
+                margin-bottom: 17px;            
+            }
+            .right-footer-up {
+                border-bottom: 1px solid rgb(250, 232, 209);
+                padding-top: 28px;        
+                padding-bottom: 47px;
+                padding-left: 66px;
+            }
+            .right-footer-down {
+                padding-top: 30px;
+                padding-bottom: 47px;
+                padding-left: 66px;
+                .newsletter-title {
+                    margin-bottom: 29px;
+                }
+                .email-contact {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 45px;
+                    .imgWrap {
+                        width: 40px;
+                        margin-right: 26px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .email-links {
+                        display: flex;
+                        flex-direction: column;
+                        a {
+                            color: rgb(250, 232, 209);
+                            font-size: 16px;
+                            text-decoration: none;
+                            font-family: VinovestMedium;
+                            line-height: 30px;
+                            font-weight: 500;
+                            transition: all 0.3s ease 0s;
+                        }
+                        .bottom-link {
+                            color: rgb(126, 223, 131);
+                        }
+                        a:hover {
+                            opacity: 0.5;
+                        }
+                    }
+                }
+                .business-bbb {
+                    width: 150px;
+                    overflow: hidden;
+                }
+                .stores {
+                    margin-top: 50px;
+                }
+            }
+        }
     }
 }

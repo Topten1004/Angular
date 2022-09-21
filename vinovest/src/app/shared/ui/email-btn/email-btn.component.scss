@@ -1,0 +1,33 @@
+.email-btn-main {
+    max-width: 371px;
+    height: 60px;
+    border: 1px solid rgb(250, 232, 209);    
+    position: relative;
+    input {
+        padding: 16px 24px;
+        width: calc(100% - 60px);
+        height: 100%;
+        background-color: transparent;
+        color: rgb(250, 232, 209);
+        outline-width: 0px ;
+        border: none !important;
+        font-family: VinovestMedium;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+    }
+    input::placeholder {
+        opacity: 1 !important;
+        color: rgb(250, 232, 209);
+    }
+    button {
+        border: none !important;
+        height: 100%;
+        position: absolute;
+        width: 60px;
+        background-color: rgb(250, 232, 209);
+        svg {
+            border: none;
+        }
+    }
+}

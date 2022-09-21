@@ -11,6 +11,10 @@ $height : 90px;
     position: relative;    
     text-transform: uppercase;   
     font-family: VinovestMono;
+    
+}
+.mainMenu-link:hover {
+    opacity: 0.5;
 }
 .close-menu {
     transition: transform 0.5s ease 0s;
@@ -20,10 +24,21 @@ $height : 90px;
 .open-menu {
     transition: transform 0.7s ease 0s;
     transform: translateY(0%);
-    z-index: 1;
+    z-index: 2000;
     opacity: 1;
 }
-
+.relative-class {
+    position: relative;
+}
+.display-menu {    
+    transform: translateY( 0% );
+    transition: transform 0.7s ease 0s;
+    z-index: 2000;
+}
+.close-menu {
+    transform: translateY( -101% );
+    transition: transform 0.5s ease 0s;
+}
 
 //  main custom css
 .header-main {    
@@ -43,7 +58,7 @@ $height : 90px;
                 height: 100%;        
             }
         }
-        .header-desktop-transparent-menuitems {
+        .header-desktop-transparent-menuitems {            
             padding : 0px 0px 0px 58px;
             display: flex;
             align-items: center;
@@ -54,8 +69,18 @@ $height : 90px;
                 .mainMenu-link {
                     color : rgb(36, 46, 53) ;
                 }
+                .main-menu-new {                    
+                    position: absolute;
+                    top: -20px;
+                    left : 100%;
+                    color: white;
+                    background-color: rgb(69, 137, 207);
+                    font-size: 8px;
+                    line-height: 1;
+                    padding: 4px;
+                }                
             }
-            .left-menu {
+            .right-menu {
                 display: flex;
                 align-items: center;
                 text-align: right;
@@ -79,7 +104,7 @@ $height : 90px;
                     padding-bottom: 5px;
                     transform: translateX(-50%) ;
                 }
-                .left-started-btn {
+                .right-started-btn {
                     background-color: rgb(168, 109, 55);
                     color : white;
                     border-radius: 3px;
@@ -90,17 +115,20 @@ $height : 90px;
                     border : none;
                     font-family: VinovestMono;                            
                 }
-                .left-started-btn:hover {
+                .right-started-btn:hover {
                     box-shadow: rgb(0 0 0 / 30%) 0px 4px 20px ;
                     transition: box-shadow 0.6s ease-in-out 0s;
                 }
             }
         }
     }
-    .header-desktop-white {
-        background-color: grey;
-        display: none;
+        
+    .header-desktop-white {        
+        nav {            
+            background-color: white;            
+        }
     }
+
     .header-mobile {
         display: none;
     }

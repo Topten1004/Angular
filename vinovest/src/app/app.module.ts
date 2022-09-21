@@ -19,6 +19,7 @@ import { AnimationBtnComponent } from './shared/ui/animation-btn/animation-btn.c
 import { WineInvestCardComponent } from './components/layouts/footer/wine-invest-card/wine-invest-card.component';
 import { FooterListComponent } from './components/layouts/footer/footer-list/footer-list.component';
 import { EmailBtnComponent } from './shared/ui/email-btn/email-btn.component';
+import { HomeComponent } from './page/home/home.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { EmailBtnComponent } from './shared/ui/email-btn/email-btn.component';
     WineInvestCardComponent,
     FooterListComponent,
     EmailBtnComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

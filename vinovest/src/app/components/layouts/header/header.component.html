@@ -1,25 +1,46 @@
 
 
 <div class="header-main">
-    <nav >
+    <nav style="z-index: 100;">
         <!-- Heade Desktop view -->
         
         <div class="header-desktop" >
             <!-- Header desktop transparent -->
             <div class="header-desktop-transparent" >
-                <nav class="nav-link">
+                <nav 
+                    class="nav-link"
+                    [ngClass]="isScrollDown ? 'close-menu' : 'display-menu' " 
+                >
                     <div class="logo">
                         <a href="/">
-                            <img src={{logoImg_source}} alt="logo" class="logo-img" />
+                            <img src={{logo_transparent}} alt="logo" class="logo-img" />
                         </a>
                     </div>
                     <div class="header-desktop-transparent-menuitems" >
                         <div class="main-menu" >
-                            <a class="mainMenu-link link" *ngFor="let menuItem of menuItems">{{menuItem.label}}</a>
+                            <a 
+                                class="mainMenu-link link" 
+                                href={{menuItem.path}} 
+                                *ngFor="let menuItem of menuItems; let i = index" 
+                                [ngClass]="i === 3 ? 'relative-class' : '' "
+                            >
+                                {{menuItem.label}}
+                                <div *ngIf="i === 3 " class="main-menu-new">
+                                    New
+                                </div>                                
+                            </a>
+                            
                         </div>
-                        <div class="left-menu">                            
-                            <a class="login-link link" href="/login">Log in</a>                            
-                            <button class="left-started-btn link" >Get started</button>
+                        <div class="right-menu">                            
+                            <a class="login-link link" href="/login">
+                                Log in
+                            </a>                            
+                            <button 
+                                class="right-started-btn link" 
+                                (click)="handleClickStarted($event)"
+                            >
+                                Get started
+                            </button>
                         </div>
                     </div>
                 </nav>
@@ -27,23 +48,36 @@
             <!-- End Header desktop transparent -->
 
             <!-- Header desktop white -->
-            <div class="header-desktop-white">
-                <nav class="nav-link">
+            <div 
+                class="header-desktop-white"                 
+            >
+                <nav 
+                    class="nav-link"
+                    [ngClass]="isScrollDown ? 'display-menu' : 'close-menu' " 
+                >
                     <div class="logo">
                         <a href="/">
-                            <img src={{logoImg_source}} alt="logo" class="logo-img" />
+                            <img src={{logo_white}} alt="logo" class="logo-img" />
                         </a>
                     </div>
                     <div class="header-desktop-transparent-menuitems" >
                         <div class="main-menu" >
-                            <a class="mainMenu-link link" *ngFor="let menuItem of menuItems">{{menuItem.label}}</a>
+                            <a class="mainMenu-link link" *ngFor="let menuItem of menuItems; let i = index" [ngClass]="i === 3 ? 'relative-class' : '' " >
+                                {{menuItem.label}}
+                                <div *ngIf="i === 3 " class="main-menu-new">
+                                    New
+                                </div>                                
+                            </a>
+                            
                         </div>
-                        <div class="left-menu">                            
-                            <a class="login-link link" href="/login">Log in</a>                            
-                            <button class="left-started-btn link" >Get started</button>
+                        <div class="right-menu">                            
+                            <a class="login-link link" href="/login">
+                                Log in
+                            </a>                            
+                            <button class="right-started-btn link" >Get started</button>
                         </div>
                     </div>
-                </nav>                
+                </nav>               
             </div>
             <!-- End Header desktop white -->
 

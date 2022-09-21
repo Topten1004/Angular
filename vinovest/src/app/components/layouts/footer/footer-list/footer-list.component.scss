@@ -1,11 +1,11 @@
 .footer-list-main {
     .title {
-        margin-bottom: 15px;
         font-family: Roslindaledisplaycondensed, sans-serif;
         font-weight: 500;
         font-size: 32px;
         line-height: 44px;
         margin: 0px;        
+        margin-bottom: 15px;
     }
     nav {
         display: flex;
@@ -21,6 +21,7 @@
         color: inherit;
         transition: all 0.3s ease 0s;
         cursor: pointer;
+        margin-bottom: 4px;
     }
     .list:hover {
         opacity: 0.5;

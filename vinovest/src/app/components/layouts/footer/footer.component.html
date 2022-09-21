@@ -5,10 +5,22 @@
 
             <div class="col-6 left-footer-side">
                 <div class="left-footer-up">
-                    <div class="list-container" *ngFor="let list of footerMenuItems">
-                        <app-footer-list                        
-                            [List]="list"
-                        ></app-footer-list>
+                    <div class="list-container">
+                        <div *ngFor="let list of footerMenuItems">
+                            <app-footer-list                        
+                                [List]="list"
+                            ></app-footer-list>
+                        </div>
+                    </div>
+                    <div class="follow-icons">
+                        <span>
+                            follow
+                        </span>
+                        <li class="" *ngFor="let icon of followIcons">
+                            <a href={{icon.path}} >
+                                <img src={{icon.icon}} >
+                            </a>
+                        </li>
                     </div>
                 </div>
                 <div class="list-container left-footer-down" *ngFor="let list of recentArticles">
@@ -18,9 +30,41 @@
                 </div>                
             </div>
 
-            <div class="col-6">
+            <div class="col-6 right-footer-side">
                 <div class="right-footer-up">
-                    
+                    <div class="newsletter-title">
+                        Sign up for the newsletter!
+                    </div>
+                    <app-email-btn></app-email-btn>
+                </div>
+                <div class="right-footer-down">
+                    <div class="newsletter-title">
+                        Want to talk wine investing?
+                    </div>
+                    <div class="email-contact">
+                        <div class="imgWrap">
+                            <img src={{woman_img}} alt="Vinovest Inc., Wholesale Wine, Culver City, CA">
+                        </div>
+                        <div class="email-links">
+                            <a href="" >
+                                hello@vinovest.co
+                            </a>
+                            <a href="" class="bottom-link">
+                                will reply in 48hrs
+                            </a>
+                        </div>
+                    </div>
+                    <div class="business-bbb">
+                        <img src={{BBB_img}} alt="Vinovest Inc., Wholesale Wine, Culver City, CA" >
+                    </div>
+                    <div class="stores">
+                        <a href="" >
+                            <img src={{appStore_img}} alt="App Store" >
+                        </a>
+                        <a href="" >
+                            <img src={{googlePlay_img}} alt="Google Play" style="margin-left: 20px;" >
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

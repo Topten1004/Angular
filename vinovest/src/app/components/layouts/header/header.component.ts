@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { Component, OnInit , HostListener } from '@angular/core';
+import { Component, OnInit , HostListener , Input } from '@angular/core';
 import { MenuItem , MainMenuItems } from 'src/app/static/header/mainHeader';
 
 @Component({
@@ -10,9 +10,16 @@ import { MenuItem , MainMenuItems } from 'src/app/static/header/mainHeader';
 
 export class HeaderComponent implements OnInit {
 
+  mainColor : string = '' ;
+  loginColor : string = '' ;
+
   logoImg_source : string  = '../../../../assets/logo.svg' ;
   logoImg_light : string = '../../../../assets/logo_light.svg' ;    
   isScrollDown : boolean = false ;  
+
+  logo_transparent : string = this.logoImg_light ;
+  logo_white : string = this.logoImg_source ;
+  event$ ;
 
   menuItems : MenuItem[] = MainMenuItems ;
 
@@ -25,20 +32,17 @@ export class HeaderComponent implements OnInit {
     }
   }  
 
-  logo_transparent : string = this.logoImg_source ;
-  logo_white : string = this.logoImg_source ;
- 
-  event$ ;
-  
   constructor( location : Location) {
     this.event$ = location.onUrlChange( (val) => {      
+      if( val === '/') {
+        this.mainColor = 'rgb(239, 221, 199)' ;
+      }
       if( val.includes('about-us') ) {
-        this.logo_transparent = this.logoImg_light ;
+        this.logo_transparent = this.logoImg_source ;
       }
     })
   }
   
-
   ngOnInit(): void {
   }
 

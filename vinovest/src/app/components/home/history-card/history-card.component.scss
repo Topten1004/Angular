@@ -1,0 +1,46 @@
+.history-card-main {
+    background-color: rgb(36, 46, 53);
+    color: rgb(239, 221, 199);
+    padding: 8px 16px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    min-width: 112px;
+
+    .percentage {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // width: 80px;
+
+        span {
+            font-size: 24px;
+            font-family: Roslindaledisplaycondensed, sans-serif;
+            line-height: 167%;
+        }
+        .arrow-up-div{
+            background-color: rgb(239, 221, 199);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            img {
+                height: 8px;
+            }
+        }
+        
+    }    
+    .release-note {
+        display: flex;
+        align-items: center;
+        object-fit: contain;
+        width: fit-content;
+        font-size: 10px;
+        line-height: 200%;
+        font-family: vinovestmedium;        
+    }
+}

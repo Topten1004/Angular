@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CountUpModule } from 'ngx-countup';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,8 @@ import { WineInvestCardComponent } from './components/layouts/footer/wine-invest
 import { FooterListComponent } from './components/layouts/footer/footer-list/footer-list.component';
 import { EmailBtnComponent } from './shared/ui/email-btn/email-btn.component';
 import { HomeComponent } from './page/home/home.component';
+import { HeroComponent } from './components/home/hero/hero.component';
+import { HistoryCardComponent } from './components/home/history-card/history-card.component';
 
 @NgModule({
   declarations: [
@@ -37,12 +40,15 @@ import { HomeComponent } from './page/home/home.component';
     FooterListComponent,
     EmailBtnComponent,
     HomeComponent,
+    HeroComponent,
+    HistoryCardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatGridListModule,
+    CountUpModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

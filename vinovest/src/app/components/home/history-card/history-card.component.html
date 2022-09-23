@@ -1,0 +1,18 @@
+<div class="history-card-main">
+    <div class="percentage">
+        <div>
+            <span 
+                [countUp]="count_up" 
+                [options]="{ duration : 3, enableScrollSpy: true }"
+            >
+            </span>
+            <span>%</span>
+        </div>
+        <div class="arrow-up-div">
+            <img src={{arrowUp_img}} alt="arrowupimg" >        
+        </div>
+    </div>
+    <div class="release-note">
+        {{historyNote}}
+    </div>
+</div>

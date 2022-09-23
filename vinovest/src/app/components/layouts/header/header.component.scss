@@ -42,7 +42,9 @@ $height : 90px;
 
 //  main custom css
 .header-main {    
-    position: absolute;    
+    // position: fixed;
+    position: absolute;
+    top: 0%;
     nav {
         position: fixed;
         width: 100%;
@@ -67,6 +69,7 @@ $height : 90px;
                 display: flex;
                 align-items: center;
                 .mainMenu-link {
+                    // color : rgb(239, 221, 199) ;
                     color : rgb(36, 46, 53) ;
                 }
                 .main-menu-new {                    

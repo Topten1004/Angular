@@ -19,7 +19,8 @@
                     <div class="header-desktop-transparent-menuitems" >
                         <div class="main-menu" >
                             <a 
-                                class="mainMenu-link link" 
+                                [ngStyle]="{'color' : mainColor}"
+                                class="mainMenu-link link"
                                 href={{menuItem.path}} 
                                 *ngFor="let menuItem of menuItems; let i = index" 
                                 [ngClass]="i === 3 ? 'relative-class' : '' "
@@ -32,12 +33,14 @@
                             
                         </div>
                         <div class="right-menu">                            
-                            <a class="login-link link" href="/login">
+                            <a 
+                                class="login-link link" href="/login"
+                                [ngStyle]="{'color' : loginColor}"
+                            >
                                 Log in
                             </a>                            
                             <button 
-                                class="right-started-btn link" 
-                                (click)="handleClickStarted($event)"
+                                class="right-started-btn link"                                 
                             >
                                 Get started
                             </button>

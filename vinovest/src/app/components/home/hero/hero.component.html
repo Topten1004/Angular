@@ -1,0 +1,61 @@
+<div class="hero-main">
+
+    <div class="left-hero-main">
+    
+        <div class="left-hero">
+            <div>
+                <h1>
+                    {{title}}            
+                </h1>
+                <div class="left-hero-content">
+                    {{content}}
+                </div>
+                <ul class="left-hero-list">
+                    <li *ngFor="let item of list">
+                        {{item}}
+                    </li>
+                </ul>        
+                <app-animation-btn
+                    label="get started"
+                ></app-animation-btn>
+            </div>
+        </div>
+    
+        <div class="left-hero-company">
+            <img src={{logo.path}} alt={{logo.label}} *ngFor="let logo of companyLogos">        
+            <div class="left-hero-recommended">
+                <img src={{companyLogos[companyLogos.length-1].path}} alt="">
+                {{companyLogos[companyLogos.length-1].label}}
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="right-hero">
+        <div class="right-hero-container">
+            <div class="wine-image">
+                <img src={{rightWine_img}} alt="">
+
+                <div 
+                    class="bottle{{i+1}}"
+                    *ngFor="let wineHistory of wineHistories; let i = index"
+                    (mouseover)="handleMouseOverHistoryCard( i )"      
+                    (mouseout)="handleMouseOutHistoryCard()"              
+                >
+                    <div 
+                        *ngIf="currentHistoryItem == i" 
+                        class="history-card counter_{{i+1}}"
+                    >
+                        <app-history-card
+                            [count_up]="wineHistory.percentage"
+                            [historyNote]="wineHistory.history"
+                            [arrowUp_img]="arrowUp_img"
+                        ></app-history-card>
+                        <div class="pointer pointer{{i+1}}"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>        
+    </div>
+</div>

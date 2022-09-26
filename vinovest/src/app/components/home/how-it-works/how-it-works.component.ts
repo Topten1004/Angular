@@ -25,9 +25,6 @@ export class HowItWorksComponent implements OnInit {
 
     this.maxIndex  = this.intersectionData.reduce((iMax, x, i, arr) => (x > arr[iMax] ? i : iMax), 0)
 
-    console.log( this.maxIndex , 'Max Index');
-  
-
     console.log( this.intersectionData );    
     
   }  

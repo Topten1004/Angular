@@ -6,24 +6,32 @@ import {
     EventEmitter,
     ElementRef,
   } from '@angular/core'
-  import { debounceTime, Observable, Subscription } from 'rxjs'
+  import { debounceTime, Observable, Subscription } from 'rxjs';
+
+  import { range } from "lodash";
+  
 
   
 @Directive({
-    selector: '[appObserveElement]',
+    selector: '[appIntersectImg]',
     exportAs: 'intersection',
   })
 
-export class ObserveElementDirective implements OnDestroy {
+export class IntersectImgDirective implements OnDestroy {
+
+    getThreshold() {
+        return range(100).map((i) => i/100) ;
+    }
+
     @Input() root: HTMLElement | null = null
     @Input() rootMargin = '0px 0px 0px 0px'
-    @Input() threshold = 0
-    @Input() debounceTime = 500
+    @Input() threshold = this.getThreshold()
+    @Input() debounceTime = 100
     @Input() isContinuous = false
   
-    @Output() isIntersecting = new EventEmitter<boolean>()
+    @Output() isIntersecting = new EventEmitter<number>()
   
-    _isIntersecting = false
+    _isIntersecting : number = 0
     subscription: Subscription
   
     constructor (private element: ElementRef) {
@@ -41,14 +49,16 @@ export class ObserveElementDirective implements OnDestroy {
             threshold: this.threshold,
         }
   
-        return new Observable<boolean>(subscriber => {
+        return new Observable<number>(subscriber => {
 
             const intersectionObserver = new IntersectionObserver(entries => {
 
-                const { isIntersecting } = entries[0];
-                subscriber.next(isIntersecting);
+                const { intersectionRatio } = entries[0];
+                
+                subscriber.next(intersectionRatio);
+                
         
-                isIntersecting && !this.isContinuous && intersectionObserver.disconnect();
+                intersectionRatio && !this.isContinuous && intersectionObserver.disconnect();
 
             }, options)
   
@@ -61,7 +71,7 @@ export class ObserveElementDirective implements OnDestroy {
             }
         })
         .pipe(debounceTime(this.debounceTime))
-        .subscribe(status => {
+        .subscribe(status => {            
             this.isIntersecting.emit(status)
             this._isIntersecting = status
         })

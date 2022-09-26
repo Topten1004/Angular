@@ -13,8 +13,23 @@ export class HowItWorksComponent implements OnInit {
 
   imgs : string[] = HowitworksImgs ;
   portfolioLists : EachPortfolioItem[] = PortfolioList ;
+  intersectionData : number[] = [] ;
+  maxIndex : number = 0 ;
 
   ngOnInit(): void {
   }
+  
+  Intersecting (status: number, index: number) {
+    
+    this.intersectionData[index] = status;
+
+    this.maxIndex  = this.intersectionData.reduce((iMax, x, i, arr) => (x > arr[iMax] ? i : iMax), 0)
+
+    console.log( this.maxIndex , 'Max Index');
+  
+
+    console.log( this.intersectionData );    
+    
+  }  
 
 }

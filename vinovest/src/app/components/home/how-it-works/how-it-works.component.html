@@ -1,7 +1,14 @@
 <div class="howitworks-main">
 
     <div class="img-container" >
-        <img src={{path}} alt="" *ngFor="let path of imgs" width="904" height="828">
+        <img src={{path}} alt="" 
+            *ngFor="let path of imgs; index as index"
+            width="904" height="828"
+            appIntersectImg
+            #intersection="intersection"
+            (isIntersecting)="Intersecting($event , index)"
+            [isContinuous]="true"
+        >
     </div>
 
     <div class="sticky-div">
@@ -9,7 +16,7 @@
         <h1>Invest in minutes</h1>
         <div 
             class="list-div" 
-            [ngClass]="i === 0 ? 'red-div' : ''"
+            [ngClass]="maxIndex  === i ? 'red-div' : ''"
             *ngFor="let item of portfolioLists; let i = index"
         >
             <h2>
@@ -21,6 +28,5 @@
         </div>
     </div>
     
-    <!-- <app-intersect-example></app-intersect-example> -->
 
 </div>

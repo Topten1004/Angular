@@ -1,0 +1,28 @@
+<div class="portfolio-main">
+    <div class="content">
+        <p class="note">
+            Grow your passion and returns
+        </p>
+        <h2 class="title">
+            Your investment sommelier
+        </h2>
+        <div class="portfolio-container">
+            <div class="each-portfolio" *ngFor="let item of portfolios">
+                <img src={{item.img}} alt="" srcset="">
+                <h2 class="portfolio-title">
+                    {{item.title}}
+                </h2>
+                <span class="portfolio-desc">
+                    {{item.desc}}
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="learn-more-btn">
+        <app-learn-more-btn
+            [label]="btnLabel"
+        ></app-learn-more-btn>
+    </div>
+
+</div>

@@ -1,0 +1,71 @@
+.howitworks-main {
+    max-width: 1440px;
+    margin-top: 214px;
+    margin-left: auto;        
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    
+    .img-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+        img {            
+            margin-top: 45px;
+        }
+    }
+    .sticky-div {
+        position: sticky;        
+        top : 59.0184px;
+        margin-top: 63px;
+        padding-top: 70px;
+        margin-left: -164px;
+        color: rgb(79, 28, 40);
+        width: 580px;
+        
+        span {
+            margin-bottom: 16px;
+            font-family: Favoritmonostd, sans-serif;
+            font-size: 18px;
+            line-height: 177.77%;
+            text-transform: uppercase;
+        }
+        h1 {
+            margin: 0px;            
+            font-family: Roslindaledisplaycondensed, sans-serif;
+            font-size: 64px;
+            line-height: 137%;
+            font-weight: 500;
+        }
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-family: Roslindaledisplaycondensed, sans-serif;;
+            font-size: 32px;
+            font-weight: 500;
+        }
+        P {
+            font-family: Favoritstd, sans-serif;            
+            font-size: 16px;
+            line-height: 162%;
+            margin-top: 0px;
+            margin-top: 0px;
+        }
+        .list-div {
+            color: rgb(79, 28, 40);
+            margin-top: 20px;
+            margin-right: 8px;
+            padding-right: 33px;
+            padding-left: 33px;
+        }
+        .red-div {
+            background-color: rgb(79, 28, 40);
+            color: rgb(197, 213, 228);
+            padding: 10px 33px 30px;
+            margin-bottom: 48px;
+            margin-top: 30px;
+            margin-right: 8px;
+        }
+    }
+}

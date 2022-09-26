@@ -5,6 +5,7 @@ import { CountUpModule } from 'ngx-countup';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './components/layouts/header/header.component';
 import { FooterComponent } from './components/layouts/footer/footer.component';
 import { AboutUsComponent } from './page/about-us/about-us.component';
@@ -13,7 +14,6 @@ import { LeveragingComponent } from './components/about-us/leveraging/leveraging
 import { TeamComponent } from './components/about-us/team/team.component';
 
 // import angular material ui
-import {MatGridListModule} from '@angular/material/grid-list';
 import { MemberCardComponent } from './components/about-us/member-card/member-card.component';
 import { NotransformBtnComponent } from './shared/ui/notransform-btn/notransform-btn.component';
 import { AnimationBtnComponent } from './shared/ui/animation-btn/animation-btn.component';
@@ -28,7 +28,12 @@ import { PortfolioImageCardComponent } from './components/home/portfolio-image-c
 import { LearnMoreBtnComponent } from './shared/ui/learn-more-btn/learn-more-btn.component';
 import { HowItWorksComponent } from './components/home/how-it-works/how-it-works.component';
 import { IntersectImgDirective } from './directives/intersect/intersect-img.directive';
-import { IntersectExampleComponent } from './components/home/intersect-example/intersect-example.component';
+
+/* Material */
+import { MatButtonModule } from '@angular/material/button'
+import { MatCardModule } from '@angular/material/card'
+import {MatGridListModule} from '@angular/material/grid-list';
+
 
 @NgModule({
   declarations: [
@@ -53,7 +58,6 @@ import { IntersectExampleComponent } from './components/home/intersect-example/i
     LearnMoreBtnComponent,
     HowItWorksComponent,
     IntersectImgDirective,
-    IntersectExampleComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,6 +65,9 @@ import { IntersectExampleComponent } from './components/home/intersect-example/i
     BrowserAnimationsModule,
     MatGridListModule,
     CountUpModule,
+    // FlexLayoutModule,
+    MatButtonModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

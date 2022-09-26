@@ -1,0 +1,26 @@
+<div class="howitworks-main">
+
+    <div class="img-container" >
+        <img src={{path}} alt="" *ngFor="let path of imgs" width="904" height="828">
+    </div>
+
+    <div class="sticky-div">
+        <span>how it works</span>
+        <h1>Invest in minutes</h1>
+        <div 
+            class="list-div" 
+            [ngClass]="i === 0 ? 'red-div' : ''"
+            *ngFor="let item of portfolioLists; let i = index"
+        >
+            <h2>
+                {{item.title}}
+            </h2>
+            <p>
+                {{item.content}}
+            </p>
+        </div>
+    </div>
+    
+    <!-- <app-intersect-example></app-intersect-example> -->
+
+</div>

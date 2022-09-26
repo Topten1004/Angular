@@ -23,6 +23,12 @@ import { EmailBtnComponent } from './shared/ui/email-btn/email-btn.component';
 import { HomeComponent } from './page/home/home.component';
 import { HeroComponent } from './components/home/hero/hero.component';
 import { HistoryCardComponent } from './components/home/history-card/history-card.component';
+import { PortfolioComponent } from './components/home/portfolio/portfolio.component';
+import { PortfolioImageCardComponent } from './components/home/portfolio-image-card/portfolio-image-card.component';
+import { LearnMoreBtnComponent } from './shared/ui/learn-more-btn/learn-more-btn.component';
+import { HowItWorksComponent } from './components/home/how-it-works/how-it-works.component';
+import { IntersectImgDirective } from './directives/intersect/intersect-img.directive';
+import { IntersectExampleComponent } from './components/home/intersect-example/intersect-example.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +48,12 @@ import { HistoryCardComponent } from './components/home/history-card/history-car
     HomeComponent,
     HeroComponent,
     HistoryCardComponent,
+    PortfolioComponent,
+    PortfolioImageCardComponent,
+    LearnMoreBtnComponent,
+    HowItWorksComponent,
+    IntersectImgDirective,
+    IntersectExampleComponent,
   ],
   imports: [
     BrowserModule,

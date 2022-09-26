@@ -1,8 +1,15 @@
 <button 
     class="get-started-btn"
     (click)="onClick($event)"
+    [ngStyle]="{'border-color' : borderBtnColor}"
+    (mouseover)="hover=true" (mouseleave)="hover=false"
 >
-    <div class="get-started-btn-name">                
+    <div 
+        class="get-started-btn-name"
+        [ngStyle]="{'background-color' : hover? hoverBgColor: bgColor, 
+                    'color' : hover? hoverFontColor : fontColor,
+                    'border-color' : hover? hoverBorderLabelColor : ''}" 
+    >
         {{label}}
     </div>
 </button>      

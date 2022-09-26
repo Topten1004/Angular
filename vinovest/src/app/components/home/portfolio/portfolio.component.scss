@@ -1,0 +1,73 @@
+.portfolio-main {
+    padding-top: 100px;
+    padding-bottom: 40px;
+    padding: 165px 8.888% 120px;
+
+    .content {
+        font-weight: 500;
+        color: rgb(36, 46, 53) ;
+        p {
+            font-family: Favoritmonostd;
+            font-size: 18px;
+            line-height: 177.77%;
+            text-transform: uppercase;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 18px;
+            margin-bottom: 18px;
+            width: fit-content;
+        }
+        h2 {
+            font-family: Roslindaledisplaycondensed, sans-serif ;
+            font-size: 64px;
+            line-height: 137%;
+            max-width: 700px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .portfolio-container {
+            margin: 64px auto;
+            max-width: 895px;
+            display: grid;
+
+            grid-auto-columns: 1fr;
+            gap: 21px 125px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            .each-portfolio {
+                max-width: 385px;
+                min-height: 329px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 12px;
+                margin-bottom: 30px;
+                img {
+                    max-width: 162px;
+                    height: 122px;
+                    margin-top: 43px;
+                    width: 100%;
+                    margin-bottom: 23px;
+                }
+                h2 {
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                    font-family: Roslindaledisplaycondensed, sans-serif;
+                    font-size: 32px;                    
+                }
+                span {
+                    font-size: 16px;
+                    line-height: 175%;
+                    font-family: Favoritstd, sans-serif;                    
+                    text-align: center;
+                    text-transform: none;
+                }
+            }
+        }
+    }
+
+    .learn-more-btn {        
+        text-align: center;
+    }
+}

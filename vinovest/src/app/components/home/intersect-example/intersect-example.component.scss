@@ -1,0 +1,21 @@
+.page-wrapper {
+    padding: calc(var(--unit) * 8);
+}
+
+.example-card {
+    max-width: 250px;
+
+    &--is-intersecting {
+        background: gray;
+    }
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.mat-card-image {
+    height: 150px;
+    object-fit: scale-down;
+}

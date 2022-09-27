@@ -1,3 +1,17 @@
+@keyframes FadeFromBottomWithDelay {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
 .howitworks-main {
     max-width: 1440px;
     margin-top: 214px;
@@ -44,6 +58,7 @@
             font-family: Roslindaledisplaycondensed, sans-serif;;
             font-size: 32px;
             font-weight: 500;
+            line-height: 150%;
         }
         P {
             font-family: Favoritstd, sans-serif;            
@@ -58,6 +73,7 @@
             margin-right: 8px;
             padding-right: 33px;
             padding-left: 33px;
+            transition: all 0.5s ease 0s;
         }
         .red-div {
             background-color: rgb(79, 28, 40);
@@ -66,6 +82,24 @@
             margin-bottom: 48px;
             margin-top: 30px;
             margin-right: 8px;
+            transition: all 0.5s ease 0s;
+            
+        }
+        .runAnimation_1 {
+            // animation: FadeFromBottomWithDelay 1.5s linear;
+            animation: 0.5s linear 0s 1 normal none running FadeFromBottomWithDelay;
+        }
+        .runAnimation_2 {
+            // animation: FadeFromBottomWithDelay 1.5s linear;
+            animation: 1s linear 0s 1 normal none running FadeFromBottomWithDelay;
+        }
+        .runAnimation_3 {
+            // animation: FadeFromBottomWithDelay 1.5s linear;
+            animation: 1.5s linear 0s 1 normal none running FadeFromBottomWithDelay;
+        }
+        .runAnimation_4 {
+            // animation: FadeFromBottomWithDelay 1.5s linear;
+            animation: 2s linear 0s 1 normal none running FadeFromBottomWithDelay;
         }
     }
 }

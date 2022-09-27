@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HowitworksImgs } from 'src/app/static/home';
 import { EachPortfolioItem , PortfolioList } from 'src/app/static/home';
+// import AOS from 'aos';
 
 @Component({
   selector: 'app-how-it-works',
@@ -15,8 +16,11 @@ export class HowItWorksComponent implements OnInit {
   portfolioLists : EachPortfolioItem[] = PortfolioList ;
   intersectionData : number[] = [] ;
   maxIndex : number = 0 ;
+  
 
   ngOnInit(): void {
+    // AOS.init({ once : true });
+    // AOS.refresh();
   }
   
   Intersecting (status: number, index: number) {
@@ -25,7 +29,8 @@ export class HowItWorksComponent implements OnInit {
 
     this.maxIndex  = this.intersectionData.reduce((iMax, x, i, arr) => (x > arr[iMax] ? i : iMax), 0)
 
-    console.log( this.intersectionData );    
+    // console.log( this.intersectionData );    
+    // console.log( this.maxIndex , 'max Index')
     
   }  
 

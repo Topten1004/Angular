@@ -33,6 +33,7 @@ import { IntersectImgDirective } from './directives/intersect/intersect-img.dire
 import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card'
 import {MatGridListModule} from '@angular/material/grid-list';
+import { ScrollRevealDirective } from './directives/scrollReveal/scroll-reveal.directive';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     LearnMoreBtnComponent,
     HowItWorksComponent,
     IntersectImgDirective,
+    ScrollRevealDirective,
   ],
   imports: [
     BrowserModule,

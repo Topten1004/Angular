@@ -15,14 +15,14 @@
         <span>how it works</span>
         <h1>Invest in minutes</h1>
         <div 
-            class="list-div" 
+            class="list-div runAnimation" 
             [ngClass]="maxIndex  === i ? 'red-div' : ''"
             *ngFor="let item of portfolioLists; let i = index"
         >
             <h2>
                 {{item.title}}
             </h2>
-            <p>
+            <p *ngIf="maxIndex === i">
                 {{item.content}}
             </p>
         </div>

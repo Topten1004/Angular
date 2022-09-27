@@ -73,6 +73,7 @@
             margin-right: 8px;
             padding-right: 33px;
             padding-left: 33px;
+            transition: all 0.5s ease 0s;
         }
         .red-div {
             background-color: rgb(79, 28, 40);
@@ -84,9 +85,21 @@
             transition: all 0.5s ease 0s;
             
         }
-        .runAnimation {
+        .runAnimation_1 {
             // animation: FadeFromBottomWithDelay 1.5s linear;
             animation: 0.5s linear 0s 1 normal none running FadeFromBottomWithDelay;
+        }
+        .runAnimation_2 {
+            // animation: FadeFromBottomWithDelay 1.5s linear;
+            animation: 1s linear 0s 1 normal none running FadeFromBottomWithDelay;
+        }
+        .runAnimation_3 {
+            // animation: FadeFromBottomWithDelay 1.5s linear;
+            animation: 1.5s linear 0s 1 normal none running FadeFromBottomWithDelay;
+        }
+        .runAnimation_4 {
+            // animation: FadeFromBottomWithDelay 1.5s linear;
+            animation: 2s linear 0s 1 normal none running FadeFromBottomWithDelay;
         }
     }
 }

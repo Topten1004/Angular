@@ -5,19 +5,20 @@
             *ngFor="let path of imgs; index as index"
             width="904" height="828"
             appIntersectImg
-            #intersection="intersection"
             (isIntersecting)="Intersecting($event , index)"
             [isContinuous]="true"
         >
     </div>
 
-    <div class="sticky-div">
+    <div class="sticky-div" >
         <span>how it works</span>
         <h1>Invest in minutes</h1>
         <div 
-            class="list-div runAnimation" 
-            [ngClass]="maxIndex  === i ? 'red-div' : ''"
-            *ngFor="let item of portfolioLists; let i = index"
+            class="list-div"
+            appScrollReveal
+            #useScrollReveal="useScrollReveal"
+            *ngFor="let item of portfolioLists; let i = index"      
+            [ngClass]="[maxIndex  === i ? 'red-div' : '', useScrollReveal.hasRevealed ? 'runAnimation_'+ (i + 1) : '']"            
         >
             <h2>
                 {{item.title}}
